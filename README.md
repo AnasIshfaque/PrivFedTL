@@ -2,12 +2,12 @@
 Code base for our implementation of PrivFedTL. Follow the instructions below to setup the server and client devices for conducting the experiments.
 
 ## Environment setup
-On both types of devices execute the following commands to create and activate a virtual environment named 'testenv' (you can change this name to your preference):
+On both types of devices outside the git repo directory execute the following commands to create and activate a virtual environment named 'testenv' (you can change this name to your preference):
 ```
 python3 -m venv testenv 
 ```
 ```
-source activate testenv/bin/activate
+cd PrivFedTL && source activate ../testenv/bin/activate
 ```
 Also, install the [MedMNIST](https://github.com/MedMNIST/MedMNIST) package:
 ```
