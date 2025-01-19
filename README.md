@@ -4,13 +4,13 @@ Code base for our implementation of PrivFedTL. Follow the instructions below to 
 ## Environment setup
 Execute the following commands to create and activate a virtual environment named 'testenv' (you can change this name to your preference):
 ```
-python3 -m venv testenv 
-```
-```
 git clone https://github.com/AnasIshfaque/PrivFedTL.git
 ```
 ```
-cd PrivFedTL && source activate ../testenv/bin/activate
+cd PrivFedTL && echo 'testenv' > .gitignore
+```
+```
+python3 -m venv testenv && source ./testenv/bin/activate
 ```
 Also, install the [MedMNIST](https://github.com/MedMNIST/MedMNIST) package:
 ```
