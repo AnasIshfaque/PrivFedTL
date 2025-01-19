@@ -2,9 +2,12 @@
 Code base for our implementation of PrivFedTL. Follow the instructions below to setup the server and client devices for conducting the experiments.
 
 ## Environment setup
-On both types of devices outside the git repo directory execute the following commands to create and activate a virtual environment named 'testenv' (you can change this name to your preference):
+Execute the following commands to create and activate a virtual environment named 'testenv' (you can change this name to your preference):
 ```
 python3 -m venv testenv 
+```
+```
+git clone https://github.com/AnasIshfaque/PrivFedTL.git
 ```
 ```
 cd PrivFedTL && source activate ../testenv/bin/activate
