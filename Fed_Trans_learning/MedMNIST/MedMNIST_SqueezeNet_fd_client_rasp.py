@@ -14,7 +14,7 @@ users = 4 # number of clients
 
 
 import os
-import h5py
+
 import numpy as np
 import subprocess
 import time
@@ -32,6 +32,7 @@ import torch.nn as nn
 # import torch.nn.functional as F
 import torchvision
 from torchvision import datasets,transforms,models
+from torchvision.models import SqueezeNet1_1_Weights
 import torch.optim as optim
 # from torch.autograd import Variable
 from torch.optim import lr_scheduler
@@ -40,7 +41,7 @@ from torch.utils.data import Dataset, DataLoader
 
 from tqdm import tqdm
 from pathlib import Path
-from gpiozero import CPUTemperature
+# from gpiozero import CPUTemperature
 import medmnist
 from medmnist import INFO, Evaluator
 from datetime import datetime
@@ -72,9 +73,9 @@ def getFree():
 
 
 def printPerformance():
-    cpu = CPUTemperature()
+    # cpu = CPUTemperature()
 
-    print("temperature: " + str(cpu.temperature))
+    # print("temperature: " + str(cpu.temperature))
 
     description = getFreeDescription()
     mem = getFree()
@@ -87,9 +88,9 @@ def printPerformance():
     print(description[5] + " : " + mem[6])
 
 
-printPerformance()
+# printPerformance()
 
-process = subprocess.Popen(["../../playground/Developing Transfer Learning Model/check_device.sh"])
+# process = subprocess.Popen(["../../playground/Developing Transfer Learning Model/check_device.sh"])
 
 start_time = datetime.now()
 start_time = start_time.strftime("%H:%M:%S")
@@ -294,10 +295,10 @@ for r in range(rounds):  # loop over the dataset multiple times
 
 print('Finished Training')
 
-printPerformance()
+# printPerformance()
 
 end_time = time.time()  #store end time
 print("Training Time: {} sec".format(end_time - start_time))
 
-process.kill()
-process.wait()
+# process.kill()
+# process.wait()

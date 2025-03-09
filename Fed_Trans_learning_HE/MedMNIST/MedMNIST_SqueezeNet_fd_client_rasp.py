@@ -14,7 +14,6 @@ users = 2 # number of clients
 
 
 import os
-import h5py
 import numpy as np
 import subprocess
 import time
@@ -171,7 +170,7 @@ print(f'len(train_loader): {train_total_batch}')
 
 
 # loading the TenSEAL context
-with open('../../playground/Developing H.E for FL/shared_context.pkl', 'rb') as inp:
+with open('../CKKS_contexts/shared_context.pkl', 'rb') as inp:
     shared_context_bin = pickle.load(inp)
 
 shared_context = ts.context_from(shared_context_bin)
